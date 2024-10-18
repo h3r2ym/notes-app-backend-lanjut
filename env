@@ -1,0 +1,8 @@
+HOST=localhost
+PORT=3000
+
+PGUSER=postgres
+PGHOST=localhost
+PGPASSWORD=
+PGDATABASE=
+PGPORT=5432
