@@ -8,11 +8,11 @@ class UsersHandler {
     autoBind(this);
   }
 
-  async postNoteHandler(request, h) {
+  async postUserHandler(request, h) {
     this._validator.validateUserPayload(request.payload);
     const { username, password, fullname } = request.payload;
 
-    const userId = await this._service.addNote({
+    const userId = await this._service.addUser({
       username,
       password,
       fullname,
@@ -33,7 +33,7 @@ class UsersHandler {
 
   async getUserByIdHandler(request) {
     const { id } = request.params;
-    const user = await this._service.getUserByIdHandler(id);
+    const user = await this._service.getUserById(id);
 
     return {
       status: 'success',

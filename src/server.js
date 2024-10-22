@@ -54,6 +54,10 @@ const init = async () => {
       return newResponse;
     }
 
+    if (response instanceof Error) {
+      console.error(response);
+    }
+
     return h.continue;
   });
 
